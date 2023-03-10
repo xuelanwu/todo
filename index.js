@@ -311,13 +311,13 @@ const Controller = ((view, model) => {
         const todoEl = event.target.parentNode.querySelector("span");
         todoEl.outerHTML = `<input class="input-box" id="${id}" type="text" value="${todoEl.innerText}"/>`;
         const editBtn = event.target;
-        editBtn.className = "save";
+        editBtn.className = "save-btn";
         // console.log("************* editBtn", editBtn.className);
         editBtn.addEventListener("click", (e) => {
           const updatedContent = document.querySelector(".input-box").value;
           //   console.log("******  UC", updatedContent.value);
           model
-            .updateTodo({ id, content: updatedContent, completed: false })
+            .updateTodo({ id, content: updatedContent, completed: true })
             .then((data) => {
               state.todos = state.todos.map((todo) =>
                 todo.id === data.id ? data : todo
