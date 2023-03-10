@@ -1,43 +1,94 @@
-.app{
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  border-radius: 5px;
-  width: fit-content;
-  padding:10px;
-  text-align: center;
-  gap:10px;
-  align-items: stretch;
-
+* {
+  box-sizing: border-box;
 }
 
-html{
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
 
-.form{
+.app {
+  width: 80%;
   display: flex;
-  flex-direction: row;
-  gap:10px;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  gap: 10px;
+  align-items: stretch;
 }
 
-.todo-list{
-  padding:0;
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 1rem;
+}
+
+.todo-list-container {
+  width: 50%;
+  height: 50vh;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: rgba(205, 199, 199, 0.1);
+  padding: 5px;
+}
+
+.todo-list {
+  width: 100%;
+  padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  gap:10px;
+  gap: 10px;
 }
 
-.todo-list li{
+.todo-list li {
   display: flex;
   justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #e6e2d3;
+  border-radius: 3px;
 }
-.todo-list li span{
+.todo-list li span {
   flex-grow: 1;
   text-align: center;
 }
 
+button {
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  color: #f0f0f0;
+}
 
+.todo-list .move-btn {
+  background-color: #4caf50;
+}
+.todo-list .delete-btn {
+  background-color: #c94c4c;
+}
+.todo-list .edit-btn,
+.todo-list .save-btn,
+.submit-btn {
+  background-color: #008cba;
+}
+
+button svg {
+  pointer-events: none;
+}
