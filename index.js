@@ -172,7 +172,7 @@ const View = (() => {
     let completedTemplate = "";
     // console.log("******** render c", todos);
     todos.forEach((todo) => {
-      const liTemplate = `<li><button class="move-btn" id="${todo.id}" value="${todo.content}">Move</button><span>${todo.content}</span><button class="edit-btn" id="${todo.id}">edit</button><button class="delete-btn" id="${todo.id}">delete</button></li>`;
+      const liTemplate = `<li><button class="move-btn" id="${todo.id}" value="${todo.content}">move</button><span>${todo.content}</span><button class="edit-btn" id="${todo.id}">edit</button><button class="delete-btn" id="${todo.id}">delete</button></li>`;
       completedTemplate += liTemplate;
     });
     if (todos.length === 0) {

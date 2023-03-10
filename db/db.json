@@ -1,11 +1,6 @@
 {
   "todos": [
     {
-      "id": 2,
-      "content": "hihi",
-      "completed": false
-    },
-    {
       "content": "eat lunch",
       "completed": false,
       "id": 3
